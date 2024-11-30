@@ -32,7 +32,7 @@ export async function getProductById(req: Request, res: Response) {
 
 export async function createProduct(req: Request, res: Response) {
   try {
-    console.log(req.cleanBody);
+    console.log("UserId: ", req.userId);
     const [product] = await db
       .insert(productsTable)
       .values(req.cleanBody)
